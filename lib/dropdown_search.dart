@@ -306,10 +306,10 @@ class _DropdownSearchState<T> extends State<DropdownSearch<T>> {
             icon: widget.clearButton ?? const Icon(Icons.clear, size: 24),
             onPressed: () => _handleOnChangeSelectedItem(null),
           ),
-        IconButton(
-          icon: widget.dropDownButton ??
+        GestureDetector(
+          child: widget.dropDownButton ??
               const Icon(Icons.arrow_drop_down, size: 24),
-          onPressed: () => _selectSearchMode(data),
+          onTap: () => _selectSearchMode(data),
         ),
       ],
     );
